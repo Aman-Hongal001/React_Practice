@@ -2,25 +2,29 @@
 import logo from './images/img.png'
 import './App.css';
 import Header from './Header';
+import { useState } from 'react';
 
 
 function App() {
   
+  let [count,setCount]=useState(1)
+
   let displayData=()=>{
-    alert("Welcome to event handling in React");
+    setCount(count+1);
   }
 
   let addData=(a,b)=>{
     alert("The sum is "+(a+b));
   }
 
+
   return (
     <div className="App">
       {/* images from direct web */}
       <p className='text-left'>Images used from local storage</p>
       <img width={100} src={logo} alt="Img from local storage" />
-
-      <button className='bg-blue-700 text-yellow-300 p-7' onClick={displayData}>Save</button>
+      {count}
+      <button className='bg-blue-700 text-yellow-300 p-7' onClick={displayData}>Increment</button>
       <button className='bg-red-600 ml-4 p-7'onClick={()=>addData(20,25)}>Add 2 number</button>
 
       <p className='text-left'>Images used from direct url from web</p>
