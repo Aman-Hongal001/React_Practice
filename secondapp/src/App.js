@@ -33,6 +33,7 @@ function App() {
   }
 
   let num = 404;
+  let arr = [1,2,3,4,5,6,7];
 
   return (
     <div className="App">
@@ -62,6 +63,8 @@ function App() {
       <Header num={num}>
         <p>Para from Header tag in app.js</p>
       </Header>
+
+      <h1>Looping array using map {arr.map((list)=><span>{list}</span>)}</h1>
 
       
     </div>
