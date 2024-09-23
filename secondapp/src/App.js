@@ -14,6 +14,7 @@ function App() {
   if(pshow){
     template = <>
       <button className='bg-yellow-300 p-7' onClick={()=>setPshow(!pshow)}>Hide</button>
+      <Card/>
       <p className='bg-blue-400'>Welcome to Condition statement with state management</p>
     </>
   }
@@ -68,3 +69,11 @@ function App() {
 }
 
 export default App;
+
+
+let Card=()=>{
+  return(
+    <p className='bg-red-400'>The Component is called directly using condition</p>
+    
+  )
+}
