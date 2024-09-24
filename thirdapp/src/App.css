@@ -95,3 +95,36 @@
   top: 30%;
 }
 
+.faqDiv{
+  margin: auto;
+  width: 1320px;
+}
+
+.faqitems{
+  border: 1px solid red;
+  margin: 20px;
+}
+
+.faqitems h2{
+  margin: 0;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faqitems p{
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  height: 0px;
+  transform: scaleY(0);
+  transition: 0.5s;
+}
+
+.faqAnsShow{
+  height: auto  !important;
+  transform: scaleY(1) !important;
+  padding: 10px !important;
+}
