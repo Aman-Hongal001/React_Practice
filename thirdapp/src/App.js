@@ -7,9 +7,18 @@ function App() {
 
   let [pstatus,setPstatus]=useState(false)
   let [menuStatus,setMenuStatus]=useState(false)
+  let [modalStatus,setmodalStatus]=useState(false)
 
   return (
     <div className="App">
+
+      <button className='en' onClick={()=>setmodalStatus(true)}>Explore Know</button>
+
+      <div className={`modalOverlay ${modalStatus ? 'showmodalOverlay':''} `} onClick={()=>setmodalStatus(false)}></div>
+      <div className={`modelDiv ${modalStatus ? 'showmodelDiv':''} `}>
+        <h3>Enquiry Know</h3>
+      </div>
+
 
       <button className='micon' onClick={()=>setMenuStatus(!menuStatus)}>
         {menuStatus ? <span>&times;</span>:<span>&#9776;</span>}
