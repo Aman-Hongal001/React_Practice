@@ -2,6 +2,7 @@
 import './App.css';
 import { useState } from 'react';
 import { faqQuestions } from './data/faq';
+import FaqComp from './faqcom';
 
 
 function App() {
@@ -54,6 +55,9 @@ function App() {
           );
         })}
       </div>
+      <hr/>
+      <hr/>
+      <FaqComp/>
 
 
 
