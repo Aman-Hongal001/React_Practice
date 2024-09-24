@@ -1,0 +1,9 @@
+.error{
+    background-color: red;
+    color: while;
+}
+
+.warning{
+    background-color: yellow;
+    color: rgba(165, 42, 42, 0.693);
+}
