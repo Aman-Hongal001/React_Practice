@@ -3,6 +3,8 @@ import './App.css';
 import { useState } from 'react';
 import { faqQuestions } from './data/faq';
 import FaqComp from './faqcom';
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 
 function App() {
@@ -11,9 +13,20 @@ function App() {
   let [menuStatus,setMenuStatus]=useState(false)
   let [modalStatus,setmodalStatus]=useState(false)
   let [showAns,setshowAns]=useState(faqQuestions[0].id)
+  let saveInfo=()=>{
+    // NotificationManager.info("Welcome to React Notification");
+    // NotificationManager.success('Suceess Message',"Welcome to React Notification");
+    NotificationManager.error("error message");
+    
+  }
 
   return (
     <div className="App">
+      <NotificationContainer/>
+      <button onClick={saveInfo}>Button for React Noti</button>
+      <br/>
+      <br/>
+
 
       {/* side scroll down modal  */}
       <button className='en' onClick={()=>setmodalStatus(true)}>Explore Know</button>
