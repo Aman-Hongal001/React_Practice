@@ -1,8 +1,9 @@
 // import logo from './logo.svg';
-import logo from './images/img.png'
+import logo from './images/img.png';
 import './App.css';
 import Header from './Header';
 import { useState } from 'react';
+import btnModule from './button.module.css';
 
 
 function App() {
@@ -66,7 +67,11 @@ function App() {
 
       <h1>Looping array using map {arr.map((list)=><span>{list}</span>)}</h1>
 
-      
+      {/* module.css button below */}
+      <button className={btnModule.error}>Btn With Error module</button><span> </span>
+      <button className={btnModule.warning}>Btn with Warning module</button>
+
+
     </div>
   );
 }
