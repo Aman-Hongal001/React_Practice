@@ -16,3 +16,20 @@ nav ul{
 h1{
     text-align: center;
 }
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1320px;
+    border: 2px solid red;
+    margin: auto;
+}
+
+.blog_item{
+    padding-bottom: 10px;
+    text-align: center;
+    flex-basis: 23%;
+    margin: 1%;
+    box-shadow: 0px 0px 10px 2px #ccc;
+
+}
