@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import {tabs} from './data/tabs'
 
 function App() {
   let [todolist,setTodolist]=useState([])
@@ -27,9 +28,35 @@ function App() {
     )
   })
 
+  let [activetab,setActivetab]=useState(0)
+  let [activeContent,setActiveContent]=useState(tabs[0])
+
+  let changeData=(index)=>{
+    setActivetab(index)
+    setActiveContent(tabs[index])
+  }
+
 
   return (
     <div className="App">
+{/* tabs implementation */}
+      <div className='tabsOuter'>
+        <h1>Tabs Handling in React </h1>
+        <ul>
+          {tabs.map((tabItem,index)=>{
+            return(
+              <li>
+                <button className={activetab===index?'activeButton':''} onClick={()=>{changeData(index)}}>{tabItem.title}</button>
+              </li>
+            );
+          })}
+        </ul>
+        {activeContent!==undefined? 
+        <p>{activeContent.discription}</p>:<></>
+        }
+      </div>
+
+
       <h1>Todo List</h1>
       <form onSubmit={saveToDolist}>
         <input type="text" name='toname'/><button>Save</button>
