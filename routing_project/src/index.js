@@ -8,6 +8,7 @@ import Course from './pages/course';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Blog from './pages/blog';
 import Blog_Data from './pages/Blog_Data';
+import Error404 from './pages/error404';
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let allRoute = createBrowserRouter(
@@ -31,6 +32,10 @@ let allRoute = createBrowserRouter(
     {
       path:'blog/:id',
       element:<Blog_Data/>
+    },
+    {
+      path:'*',
+      element:<Error404/>
     },
   ]
 )
